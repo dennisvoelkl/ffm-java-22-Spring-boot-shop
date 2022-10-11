@@ -53,9 +53,10 @@ public class ShopService {
         orderRepo.removeOrder(id);
     }
 
-    public void addProduct(Product product) {
-        String id = UUID.randomUUID().toString();
+    public String addProduct(Product product) {
+        String id = serviceUtils.generateUUID();
         productRepo.addProduct(id, product);
+        return id + " : " + product;
     }
 
 }
