@@ -13,12 +13,15 @@ import java.util.UUID;
 public class ShopService {
     private final ProductRepo productRepo;
     private final OrderRepo orderRepo;
+    private final ServiceUtils serviceUtils;
 
     public ShopService(
             ProductRepo productRepo,
-            OrderRepo orderRepo) {
+            OrderRepo orderRepo,
+            ServiceUtils serviceUtils) {
         this.productRepo = productRepo;
         this.orderRepo = orderRepo;
+        this.serviceUtils = serviceUtils;
     }
 
     public Product getProduct(String id) {
@@ -58,5 +61,4 @@ public class ShopService {
         productRepo.addProduct(id, product);
         return id + " : " + product;
     }
-
 }
