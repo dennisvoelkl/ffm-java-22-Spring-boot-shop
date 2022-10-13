@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-@Service
+@Service // oder @Component
 public class ShopService {
     private final ProductRepo productRepo;
     private final OrderRepo orderRepo;

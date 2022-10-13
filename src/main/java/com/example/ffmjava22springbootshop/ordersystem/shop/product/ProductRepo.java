@@ -29,5 +29,6 @@ public class ProductRepo {
 
     public void addProduct(String id, Product product) {
         products.put(id, product);
+        System.out.println("Products" + products);
     }
 }
